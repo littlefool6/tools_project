@@ -119,7 +119,7 @@ public class FiveInOneTest {
 
     @Test
     public void YHPCJL009() throws Exception {
-        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//确成硅//隐患排查记录表.xlsx");
+        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//金道生物//隐患排查记录表.xlsx");
         ExcelUtil<YHPCJL009> excelUtil = new ExcelUtil<>(YHPCJL009.class);
         List<YHPCJL009> messageList = excelUtil.importExcel(inputStream);
         String message = JSONUtil.toJsonStr(messageList);
@@ -129,7 +129,7 @@ public class FiveInOneTest {
 
     @Test
     public void YHPCREXX010() throws Exception {
-        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//确成硅//隐患排查任务信息表.xlsx");
+        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//金道生物//隐患排查任务信息表.xlsx");
         ExcelUtil<YHPCREXX010> excelUtil = new ExcelUtil<>(YHPCREXX010.class);
         List<YHPCREXX010> messageList = excelUtil.importExcel(inputStream);
         for (YHPCREXX010 item : messageList) {

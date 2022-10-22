@@ -1,10 +1,12 @@
 package com.example.study.controller;
 
+import cn.hutool.core.io.FileUtil;
 import cn.hutool.json.JSONUtil;
 import com.example.study.entity.*;
 import com.example.study.model.vo.ResponseVo;
 import com.example.study.util.BuildResponseUtils;
 import com.example.study.util.KafkaUtils;
+import com.example.study.util.poi.ExcelUtil;
 import com.google.common.collect.Lists;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,7 +15,11 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -229,4 +235,46 @@ public class KafkaController {
         kafkaUtils.sendMessage("ZYCSWXYS013", message);
         return BuildResponseUtils.success();
     }
+
+    /**
+     * @MethodName sendMessageYHPCJL009
+     * @Description 隐患排查记录表
+     * @Param [file]
+     * @Return com.example.study.model.vo.ResponseVo<?>
+     * @Author zlguo
+     * @Date 2022/10/12
+    **/
+    @ApiOperation("sendMessageYHPCJL009")
+    @PostMapping("kafka/sendMessageYHPCJL009")
+    public ResponseVo<?> sendMessageYHPCJL009(@RequestParam MultipartFile file) throws Exception {
+        InputStream inputStream = file.getInputStream();
+        ExcelUtil<YHPCJL009> excelUtil = new ExcelUtil<>(YHPCJL009.class);
+        List<YHPCJL009> messageList = excelUtil.importExcel(inputStream);
+        String message = JSONUtil.toJsonStr(messageList);
+        log.info("YHPCJL009---" + message);
+        kafkaUtils.sendMessage("YHPCJL009", message);
+        return BuildResponseUtils.success();
+    }
+
+    /**
+     * @MethodName sendMessageYHPCREXX010
+     * @Description 隐患排查任务信息表
+     * @Param [file]
+     * @Return com.example.study.model.vo.ResponseVo<?>
+     * @Author zlguo
+     * @Date 2022/10/12
+    **/
+    @ApiOperation("sendMessageYHPCREXX010")
+    @PostMapping("kafka/sendMessageYHPCREXX010")
+    public ResponseVo<?> sendMessageYHPCREXX010(@RequestParam MultipartFile file) throws Exception {
+        InputStream inputStream = file.getInputStream();
+        ExcelUtil<YHPCREXX010> excelUtil = new ExcelUtil<>(YHPCREXX010.class);
+        List<YHPCREXX010> messageList = excelUtil.importExcel(inputStream);
+        String message = JSONUtil.toJsonStr(messageList);
+        log.info("YHPCREXX010---" + message);
+        kafkaUtils.sendMessage("YHPCREXX010", message);
+        return BuildResponseUtils.success();
+    }
+
+
 }

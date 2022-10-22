@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @ClassName YHPCREXX010
- * @Description 隐患排查记录表   topic：YHPCJL009
+ * @Description 隐患排查任务信息表   topic：YHPCREXX010
  * @Author zlguo
  * @Date 2022/7/28
  **/
