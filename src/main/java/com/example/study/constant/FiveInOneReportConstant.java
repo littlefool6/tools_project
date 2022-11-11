@@ -1,0 +1,78 @@
+package com.example.study.constant;
+
+/**
+ * @ClassName FiveInOneReportConstant
+ * @Description FiveInOneReportConstant
+ * @Author zlguo
+ * @Date 2022/11/8
+ **/
+public class FiveInOneReportConstant {
+
+    // 静态数据上报IP
+    public static final String STATIC_DATA_REPORT_IP = "58.215.18.21";
+
+    // 静态数据上报端口
+    public static final Integer STATIC_DATA_REPORT_PORT = 1003;
+
+    // 分隔符
+    public static final String DELIMITER_SYMBOL = "@@";
+
+    // AppId 目前静态数据和动态数据共用一个
+    public static final String APP_ID = "570baedcda1111e9a46cd4ae52635598";
+
+    public static final String WUXI_AREA_NUMBER = "320282";
+
+    // 统一社会信用代码
+    public static final String COMPANY_CODE = "TYSHXYDM";
+
+    // 金道生物 经度
+    public static final String JDSW_LONGITUDE = "119.754354";
+
+    // 金道生物 纬度
+    public static final String JDSW_LATITUDE = "31.43444";
+
+    // 气体泄漏监测点信息表
+    public static final String WC_ENT_LEAKPOINT_SERVICE_ID = "WC_ENT_LEAKPOINT";
+
+    // 企业承诺作业票详情表
+    public static final String WC_ENT_QYCN_SERVICE_ID = "WC_ENT_QYCN";
+
+    // 设备停用历史信息表
+    public static final String WC_PROD_HIS_SERVICE_ID = "WC_ENT_QYCN";
+
+    // 设备介质基础信息表
+    public static final String WC_ENT_SBJZ_SERVICE_ID = "WC_ENT_SBJZ";
+
+    // 安全目标指标
+    public static final String WC_ENT_SAFE_TARGET_SERVICE_ID = "WC_ENT_SAFE_TARGET";
+
+    // 安全目标指标分解
+    public static final String WC_ENT_TARGET_RESOLVE_SERVICE_ID = "WC_ENT_TARGET_RESOLVE";
+
+    // 安全目标考核
+    public static final String WC_ENT_TARGET_EAXM_SERVICE_ID = "WC_ENT_TARGET_EAXM";
+
+    // 区域报警中外来人员作业管理
+    public static final String WC_ENT_ALARM_FOREGIN_SERVICE_ID = "WC_ENT_ALARM_FOREGIN";
+
+    //报警信息管理
+    public static final String WC_ENT_ALARM_REGIONAL_SERVICE_ID = "WC_ENT_ALARM_REGIONAL";
+
+    // 预案表
+    public static final String WC_ENT_RESERVEPLAN_SERVICE_ID = "WC_ENT_RESERVEPLAN";
+
+    // 预案应急演练计划
+    public static final String WC_ENT_DRILL_SERVICE_ID = "WC_ENT_DRILL";
+
+    // 风险等级
+    public static final String WC_ENT_FXDJ_SERVICE_ID = "WC_ENT_FXDJ";
+
+    // 风险管控信息
+    public static final String WC_ENT_FXGK_SERVICE_ID = "WC_ENT_FXGK";
+
+    // 检查整改单
+    public static final String WC_ENT_PR_YHZG_SERVICE_ID = "WC_ENT_PR_YHZG";
+
+    // 整改通知单
+    public static final String WC_ENT_PR_YHZGTZ_SERVICE_ID = "WC_ENT_PR_YHZGTZ";
+}

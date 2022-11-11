@@ -4,9 +4,11 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.example.study.model.entity.UserEntity;
 import com.example.study.model.param.UserParam;
 import com.example.study.model.vo.ResponseVo;
+import com.example.study.service.FiveInOneReportService;
 import com.example.study.service.UserService;
 import com.example.study.util.CommonQueryPageUtils;
 import com.example.study.util.BuildResponseUtils;
+import com.example.study.webSocket.DelimiterEchoClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,6 +85,11 @@ public class UserController {
     @GetMapping("userPage")
     public ResponseVo<IPage<UserEntity>> selectPage(UserParam param) {
         return BuildResponseUtils.buildResponse(CommonQueryPageUtils.commonQueryPage(param, userService));
+    }
+
+    @GetMapping("fiveInOneReport")
+    public void fiveInOneReport() {
+        DelimiterEchoClient.getInstance();
     }
 
 }
