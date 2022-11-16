@@ -124,7 +124,7 @@ public class WC_ENT_PR_YHZGTZ {
     private String TBR;
 
     @JsonProperty("TBRQ")
-    @Excel(name = "填报日期")
+    @Excel(name = "填报日期1")
     private String TBRQ;
 
     @JsonProperty("SFCFZG")
@@ -160,7 +160,7 @@ public class WC_ENT_PR_YHZGTZ {
     private String ZGR;
 
     @JsonProperty("TBRQ_1")
-    @Excel(name = "填报日期")
+    @Excel(name = "填报日期2")
     private String TBRQ_1;
 
     @JsonProperty("YZQK")

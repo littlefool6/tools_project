@@ -45,7 +45,7 @@ public class WC_ENT_SBJZ {
 
     @JsonProperty("IS_ACTIVE")
     @Excel(name = "是否有效")
-    private String START_REMARK;
+    private String IS_ACTIVE;
 
     @JsonProperty("CREATOR")
     @Excel(name = "创建人")

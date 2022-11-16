@@ -25,11 +25,17 @@ public class DelimiterEchoClient {
     public DelimiterEchoClient() {
     }
 
-    public static DelimiterEchoClient getInstance() {
+    public static DelimiterEchoClient getInstance(String reportOrDownloadFlag) {
         if (instance == null) {
             instance = new DelimiterEchoClient();
             try {
-                instance.start();
+                if ("1".equals(reportOrDownloadFlag)) {
+                    // 上报
+                    instance.startReport();
+                } else if ("2".equals(reportOrDownloadFlag)) {
+                    // 下载
+                    instance.startDownload();
+                }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -42,13 +48,29 @@ public class DelimiterEchoClient {
 
     public static DelimiterClientHandler cl = new DelimiterClientHandler();
 
-    public void start() throws InterruptedException {
+    public void startReport() throws InterruptedException {
         EventLoopGroup group = new NioEventLoopGroup();/*线程组*/
         try {
             final Bootstrap b = new Bootstrap();/*客户端启动必须*/
             b.group(group)/*将线程组传入*/
                     .channel(NioSocketChannel.class)/*指定使用NIO进行网络传输*/
                     .remoteAddress(new InetSocketAddress(FiveInOneReportConstant.STATIC_DATA_REPORT_IP, FiveInOneReportConstant.STATIC_DATA_REPORT_PORT))/*配置要连接服务器的ip地址和端口*/
+                    .handler(new ChannelInitializerImp());
+            ChannelFuture f = b.connect().sync();
+            System.out.println("已连接到服务器.....");
+            f.channel().closeFuture().sync();
+        } finally {
+            group.shutdownGracefully().sync();
+        }
+    }
+
+    public void startDownload() throws InterruptedException {
+        EventLoopGroup group = new NioEventLoopGroup();/*线程组*/
+        try {
+            final Bootstrap b = new Bootstrap();/*客户端启动必须*/
+            b.group(group)/*将线程组传入*/
+                    .channel(NioSocketChannel.class)/*指定使用NIO进行网络传输*/
+                    .remoteAddress(new InetSocketAddress(FiveInOneReportConstant.STATIC_DATA_DOWNLOAD_IP, FiveInOneReportConstant.STATIC_DATA_DOWNLOAD_PORT))/*配置要连接服务器的ip地址和端口*/
                     .handler(new ChannelInitializerImp());
             ChannelFuture f = b.connect().sync();
             System.out.println("已连接到服务器.....");
@@ -70,8 +92,8 @@ public class DelimiterEchoClient {
         }
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        DelimiterEchoClient.getInstance();
-    }
+//    public static void main(String[] args) throws InterruptedException {
+//        DelimiterEchoClient.getInstance("1");
+//    }
 
 }

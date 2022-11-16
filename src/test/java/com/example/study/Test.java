@@ -1,6 +1,5 @@
 package com.example.study;
 
-import com.example.study.webSocket.DelimiterEchoClient;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.UUID;
@@ -20,10 +19,5 @@ public class Test {
         Integer total = 3600;
         int totalPage = total / 1000 + ((total % 1000 == 0) ? 0 : 1);
         System.out.println(totalPage);
-    }
-
-    @org.junit.Test
-    public void test22() throws Exception {
-        DelimiterEchoClient.getInstance();
     }
 }

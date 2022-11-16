@@ -89,7 +89,12 @@ public class UserController {
 
     @GetMapping("fiveInOneReport")
     public void fiveInOneReport() {
-        DelimiterEchoClient.getInstance();
+        DelimiterEchoClient.getInstance("1");
+    }
+
+    @GetMapping("fiveInOneDownload")
+    public void fiveInOneDownload() {
+        DelimiterEchoClient.getInstance("2");
     }
 
 }
