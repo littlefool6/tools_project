@@ -16,8 +16,6 @@ public class Test {
 
     @org.junit.Test
     public void test1() {
-        Integer total = 3600;
-        int totalPage = total / 1000 + ((total % 1000 == 0) ? 0 : 1);
-        System.out.println(totalPage);
+        System.out.println(UUID.randomUUID().toString().replace("-", ""));
     }
 }
