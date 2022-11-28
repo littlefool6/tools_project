@@ -42,9 +42,9 @@ public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf>
 //        fiveInOneReportService.reportWC_ENT_PROMISE(ctx);
 //        fiveInOneReportService.reportWC_ENT_QYCN(ctx);
 //        fiveInOneReportService.reportWC_PROD_HIS(ctx);
-        fiveInOneReportService.reportWC_ENT_SBJZ(ctx);
+//        fiveInOneReportService.reportWC_ENT_SBJZ(ctx);
 //        fiveInOneReportService.downloadWC_WARN_RESULT(ctx);
-//        fiveInOneReportService.reportWC_ENT_CGQ(ctx);
+        fiveInOneReportService.reportWC_ENT_CGQ(ctx);
 //        fiveInOneReportService.reportWC_ENT_TASK(ctx);
 //        fiveInOneReportService.reportWC_ENT_SAFE_TARGET(ctx);
 //        fiveInOneReportService.reportWC_ENT_TARGET_RESOLVE(ctx);
@@ -60,6 +60,8 @@ public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf>
 //        fiveInOneReportService.reportWC_ENT_PR_PXHD(ctx);
 //        fiveInOneReportService.reportWC_ENT_PR_YHZG(ctx);
 //        fiveInOneReportService.reportWC_ENT_PR_YHZGTZ(ctx);
+//        fiveInOneReportService.reportWC_ENT_LOGINSTATUS(ctx);
+//        fiveInOneReportService.reportWC_ENT_MATERIAL(ctx);
         ctx.flush();
     }
 

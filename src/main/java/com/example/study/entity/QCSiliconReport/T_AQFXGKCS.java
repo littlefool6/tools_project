@@ -15,13 +15,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class T_AQFXGKCS {
 
-    @JsonProperty("ID")
-    @Excel(name = "主键")
-    private String ID;
-
-    @JsonProperty(value = "RISKMEASURE_ID")
+    @JsonProperty(value = "ID")
     @Excel(name = "管控措施ID")
-    private String RISKMEASURE_ID;
+    private String ID;
 
     @JsonProperty(value = "RISK_EVENT_ID")
     @Excel(name = "风险事件ID")
@@ -69,10 +65,10 @@ public class T_AQFXGKCS {
 
     @JsonProperty(value = "DELETE_MARK")
     @Excel(name = "删除标志")
-    private String DELETE_MARK;
+    private Integer DELETE_MARK;
 
     @JsonProperty(value = "COMPANY_CODE")
     @Excel(name = "企业编码")
-    private String COMPANY_CODE;
+    private Integer COMPANY_CODE;
 
 }

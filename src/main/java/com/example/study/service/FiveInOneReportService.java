@@ -367,4 +367,34 @@ public class FiveInOneReportService {
         }
     }
 
+    // 登录情况
+    public void reportWC_ENT_LOGINSTATUS(ChannelHandlerContext ctx) throws Exception {
+        Map<String, Object> reportMap = Maps.newHashMap();
+        reportMap.put("appId", FiveInOneReportConstant.APP_ID);
+        reportMap.put("serviceId", FiveInOneReportConstant.WC_ENT_LOGINSTATUS_SERVICE_ID);
+        reportMap.put("dataId", UUID.randomUUID().toString().replace("-", ""));
+        reportMap.put("districtCode", "3201");
+        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//20221114//中优先级//8、登录情况.xlsx");
+        ExcelUtil<WC_ENT_LOGINSTATUS> excelUtil = new ExcelUtil<>(WC_ENT_LOGINSTATUS.class);
+        List<WC_ENT_LOGINSTATUS> dataList = excelUtil.importExcel(inputStream);
+        if (!dataList.isEmpty()) {
+            aesAndReportData(ctx, reportMap, JSONUtil.toJsonStr(dataList));
+        }
+    }
+
+    // 物资装备
+    public void reportWC_ENT_MATERIAL(ChannelHandlerContext ctx) throws Exception {
+        Map<String, Object> reportMap = Maps.newHashMap();
+        reportMap.put("appId", FiveInOneReportConstant.APP_ID);
+        reportMap.put("serviceId", FiveInOneReportConstant.WC_ENT_MATERIAL_SERVICE_ID);
+        reportMap.put("dataId", UUID.randomUUID().toString().replace("-", ""));
+        reportMap.put("districtCode", "3201");
+        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//20221114//中优先级//17、物资装备.xlsx");
+        ExcelUtil<WC_ENT_MATERIAL> excelUtil = new ExcelUtil<>(WC_ENT_MATERIAL.class);
+        List<WC_ENT_MATERIAL> dataList = excelUtil.importExcel(inputStream);
+        if (!dataList.isEmpty()) {
+            aesAndReportData(ctx, reportMap, JSONUtil.toJsonStr(dataList));
+        }
+    }
+
 }

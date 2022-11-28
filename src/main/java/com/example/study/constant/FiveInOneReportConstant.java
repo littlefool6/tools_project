@@ -100,6 +100,12 @@ public class FiveInOneReportConstant {
     // 整改通知单
     public static final String WC_ENT_PR_YHZGTZ_SERVICE_ID = "WC_ENT_PR_YHZGTZ";
 
+    // 登录情况
+    public static final String WC_ENT_LOGINSTATUS_SERVICE_ID = "WC_ENT_LOGINSTATUS";
+
+    // 物资装备
+    public static final String WC_ENT_MATERIAL_SERVICE_ID = "WC_ENT_MATERIAL";
+
     // 下载重大危险源预警结果表
     public static final String C_DANGRSC_WARN_RESULT_SERVICE_ID = "C_DANGRSC_WARN_RESULT";
 

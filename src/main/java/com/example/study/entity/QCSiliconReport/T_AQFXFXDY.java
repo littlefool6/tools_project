@@ -10,18 +10,14 @@ import lombok.NoArgsConstructor;
  * @Description 安全风险分析单元表  t_aqfxfxdy
  * @Author zlguo
  * @Date 2022/11/21
-**/
+ **/
 @Data
 @NoArgsConstructor
 public class T_AQFXFXDY {
 
     @JsonProperty("ID")
-    @Excel(name = "主键")
-    private String ID;
-
-    @JsonProperty("RISKUNIT_ID")
     @Excel(name = "风险单元ID")
-    private String RISKUNIT_ID;
+    private String ID;
 
     @JsonProperty("HAZARD_CODE")
     @Excel(name = "风险分析对象编码（重大危险源）")
@@ -45,7 +41,7 @@ public class T_AQFXFXDY {
 
     @JsonProperty("RISK_CLASS")
     @Excel(name = "风险等级")
-    private String RISK_CLASS;
+    private Integer RISK_CLASS;
 
     @JsonProperty("CREATE_TIME")
     @Excel(name = "创建时间")
@@ -65,10 +61,10 @@ public class T_AQFXFXDY {
 
     @JsonProperty("DELETE_MARK")
     @Excel(name = "删除标志")
-    private String DELETE_MARK;
+    private Integer DELETE_MARK;
 
     @JsonProperty("COMPANY_CODE")
     @Excel(name = "企业编码")
-    private String COMPANY_CODE;
+    private Integer COMPANY_CODE;
 
 }

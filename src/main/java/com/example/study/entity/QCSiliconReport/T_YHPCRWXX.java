@@ -6,26 +6,34 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @ClassName T_AQFXSJ
- * @Description 安全风险事件表  t_aqfxsj
+ * @ClassName T_YHPCRWXX
+ * @Description 隐患排查任务信息表   t_yhpcrwxx
  * @Author zlguo
- * @Date 2022/11/21
+ * @Date 2022/11/22
  **/
 @Data
 @NoArgsConstructor
-public class T_AQFXSJ {
+public class T_YHPCRWXX {
 
     @JsonProperty("ID")
-    @Excel(name = "风险事件ID")
+    @Excel(name = "隐患排查任务ID")
     private String ID;
 
-    @JsonProperty("RISK_UNIT_ID")
-    @Excel(name = "所属风险单元ID")
-    private String RISK_UNIT_ID;
+    @JsonProperty("RISK_MEASURE_ID")
+    @Excel(name = "管控措施ID")
+    private String RISK_MEASURE_ID;
 
-    @JsonProperty("RISK_EVENT_NAME")
-    @Excel(name = "风险事件名称")
-    private String RISK_EVENT_NAME;
+    @JsonProperty("TROUBLESHOOT_CONTENT")
+    @Excel(name = "隐患排查内容")
+    private String TROUBLESHOOT_CONTENT;
+
+    @JsonProperty("CHECK_CYCLE")
+    @Excel(name = "巡检周期")
+    private String CHECK_CYCLE;
+
+    @JsonProperty("CHECK_CYCLE_UNIT")
+    @Excel(name = "巡检周期单位")
+    private String CHECK_CYCLE_UNIT;
 
     @JsonProperty("CREATE_TIME")
     @Excel(name = "创建时间")
@@ -45,10 +53,10 @@ public class T_AQFXSJ {
 
     @JsonProperty("DELETE_MARK")
     @Excel(name = "删除标志")
-    private Integer DELETE_MARK;
+    private String DELETE_MARK;
 
     @JsonProperty("COMPANY_CODE")
     @Excel(name = "企业编码")
-    private Integer COMPANY_CODE;
+    private String COMPANY_CODE;
 
 }
