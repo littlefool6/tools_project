@@ -1,10 +1,8 @@
 package com.example.study.webSocket;
 
-import com.example.study.constant.FiveInOneReportConstant;
 import com.example.study.service.FiveInOneReportService;
 import com.example.study.util.SpringContextHolder;
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -44,7 +42,7 @@ public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf>
 //        fiveInOneReportService.reportWC_PROD_HIS(ctx);
 //        fiveInOneReportService.reportWC_ENT_SBJZ(ctx);
 //        fiveInOneReportService.downloadWC_WARN_RESULT(ctx);
-        fiveInOneReportService.reportWC_ENT_CGQ(ctx);
+//        fiveInOneReportService.reportWC_ENT_CGQ(ctx);
 //        fiveInOneReportService.reportWC_ENT_TASK(ctx);
 //        fiveInOneReportService.reportWC_ENT_SAFE_TARGET(ctx);
 //        fiveInOneReportService.reportWC_ENT_TARGET_RESOLVE(ctx);
@@ -61,7 +59,7 @@ public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf>
 //        fiveInOneReportService.reportWC_ENT_PR_YHZG(ctx);
 //        fiveInOneReportService.reportWC_ENT_PR_YHZGTZ(ctx);
 //        fiveInOneReportService.reportWC_ENT_LOGINSTATUS(ctx);
-//        fiveInOneReportService.reportWC_ENT_MATERIAL(ctx);
+        fiveInOneReportService.reportWC_ENT_MATERIAL(ctx);
         ctx.flush();
     }
 

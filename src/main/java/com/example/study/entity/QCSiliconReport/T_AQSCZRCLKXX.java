@@ -61,10 +61,10 @@ public class T_AQSCZRCLKXX {
 
     @JsonProperty(value = "DELETE_MARK")
     @Excel(name = "删除标志")
-    private String DELETE_MARK;
+    private Integer DELETE_MARK;
 
     @JsonProperty(value = "COMPANY_CODE")
     @Excel(name = "企业编码")
-    private String COMPANY_CODE;
+    private Integer COMPANY_CODE;
 
 }
