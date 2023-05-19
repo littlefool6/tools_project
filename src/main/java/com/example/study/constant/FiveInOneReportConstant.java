@@ -9,10 +9,10 @@ package com.example.study.constant;
 public class FiveInOneReportConstant {
 
     // 静态数据上报IP
-    public static final String STATIC_DATA_REPORT_IP = "58.215.18.21";
+    public static final String STATIC_DATA_REPORT_IP = "101.43.11.16";
 
     // 静态数据上报端口
-    public static final Integer STATIC_DATA_REPORT_PORT = 1003;
+    public static final Integer STATIC_DATA_REPORT_PORT = 18888;
 
     // 静态数据下载IP
     public static final String STATIC_DATA_DOWNLOAD_IP = "58.215.18.25";
@@ -111,4 +111,18 @@ public class FiveInOneReportConstant {
 
     // 上报重大危险源预警结果表
     public static final String WC_WARN_RESULT_SERVICE_ID = "WC_WARN_RESULT";
+
+    // ----------------------------------------------------------------------------------
+
+    // 企业区域人员信息
+    public static final String ENTERPRISE_AREA_PERSON_INFO_SERVICE_ID = "QY_PERSON_DATA";
+
+    // 异常督办
+    public static final String ABNORMAL_SUPERVISION_SERVICE_ID = "T_YCDB_DATA";
+
+    // 企业人员信息
+    public static final String ENTERPRISE_PERSON_INFO_SERVICE_ID = "T_QYRYXX_DATA";
+
+    // 生产设施信息表
+    public static final String PRODUCT_FACILITY_INFO_SERVICE_ID = "T_SCSSXX_DATA";
 }

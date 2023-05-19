@@ -59,7 +59,9 @@ public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf>
 //        fiveInOneReportService.reportWC_ENT_PR_YHZG(ctx);
 //        fiveInOneReportService.reportWC_ENT_PR_YHZGTZ(ctx);
 //        fiveInOneReportService.reportWC_ENT_LOGINSTATUS(ctx);
-        fiveInOneReportService.reportWC_ENT_MATERIAL(ctx);
+//        fiveInOneReportService.reportWC_ENT_MATERIAL(ctx);
+//        fiveInOneReportService.reportEnterprisePersonInfo(ctx);
+        fiveInOneReportService.reportProductFacilityInfo(ctx);
         ctx.flush();
     }
 
