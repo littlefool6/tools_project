@@ -180,4 +180,20 @@ public class FiveInOneTest {
 //        log.info("ZYCSWXYS013---" + message);
 //        kafkaUtils.sendMessage("ZYCSWXYS013", message);
     }
+
+    /**
+     * 装置停用/检维修记录
+     *
+     * @author zlguo
+     * @date 2023/6/6
+     */
+    @Test
+    public void NEW_ZZTY_JWX() throws Exception {
+        BufferedInputStream inputStream = FileUtil.getInputStream("C://Users//littlefool//Desktop//新双控//装置停用检维修记录表.xlsx");
+        ExcelUtil<NEW_ZZTY_JWX> excelUtil = new ExcelUtil<>(NEW_ZZTY_JWX.class);
+        List<NEW_ZZTY_JWX> messageList = excelUtil.importExcel(inputStream);
+        String message = JSONUtil.toJsonStr(messageList);
+        log.info("NEW_ZZTY_JWX---" + message);
+        kafkaUtils.sendMessage("NEW_ZZTY_JWX", message);
+    }
 }
