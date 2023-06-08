@@ -9,10 +9,10 @@ package com.example.study.constant;
 public class FiveInOneReportConstant {
 
     // 静态数据上报IP
-    public static final String STATIC_DATA_REPORT_IP = "101.43.11.16";
+    public static final String STATIC_DATA_REPORT_IP = "122.193.203.4";
 
     // 静态数据上报端口
-    public static final Integer STATIC_DATA_REPORT_PORT = 18888;
+    public static final Integer STATIC_DATA_REPORT_PORT = 8653;
 
     // 静态数据下载IP
     public static final String STATIC_DATA_DOWNLOAD_IP = "58.215.18.25";
