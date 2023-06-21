@@ -51,5 +51,7 @@ public class NEW_ZZTY_JWX {
     @JsonProperty("COMPANY_NAME")
     @Excel(name = "厂商名称")
     private String COMPANY_NAME;
-
+    @JsonProperty("DELETE_MARK")
+    @Excel(name = "删除标志")
+    private String DELETE_MARK;
 }
